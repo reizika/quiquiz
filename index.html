@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- PageSwitch SDK -->
+<script
+  src="https://killswith.vercel.app/sdk.js"
+  data-site="psw_live_82e8562d23afc588e65db324220fac9e"
+  async
+  defer>
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação de Idade</title>
+  <meta name="description" content="Verificação de idade para acesso ao conteúdo.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="gate-shell">
+    <div class="gate-texture" aria-hidden="true"></div>
+
+    <section class="gate-panel" aria-labelledby="age-title">
+      <h1 id="age-title">Confirme sua idade</h1>
+      <p class="gate-copy">
+        Para acessar este conteúdo, informe sua data de nascimento.
+        A verificação acontece nesta etapa antes do redirecionamento.
+      </p>
+
+      <form class="age-form" id="age-form" novalidate>
+        <div class="field-wrap">
+          <label for="birth-date">Data de nascimento</label>
+          <div class="date-field" id="date-field-wrap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <input
+              id="birth-date"
+              name="birth-date"
+              type="date"
+              min="1900-01-01"
+              aria-describedby="age-note"
+              required
+            >
+          </div>
+          <p id="age-note" class="field-note">Você precisa ter 18 anos ou mais.</p>
+        </div>
+
+        <p id="age-error" class="form-error" role="alert" style="display:none">
+          <span class="form-error__dot" aria-hidden="true"></span>
+          <span id="age-error-text"></span>
+        </p>
+
+        <button type="submit" class="continue-button" id="continue-btn">
+          <span id="btn-text">Continuar</span>
+          <svg id="btn-icon-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+          </svg>
+          <svg id="btn-icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </button>
+      </form>
+
+      <div class="trust-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>
+        </svg>
+        <span>Sua data é usada somente para esta verificação.</span>
+      </div>
+    </section>
+
+    <footer class="gate-footer">
+      <span>© 2026 — Experiência de passagem segura</span>
+      <a href="https://inlead.digital/" target="_blank" rel="noreferrer">
+        Central de anúncios
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+        </svg>
+      </a>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+
+  <!-- Heartbeat: visitantes online em tempo real -->
+  <script>window.HB_PAGE = 'gate';</script>
+  <script src="assets/heartbeat.js"></script>
+
+  <!-- Antigravity Ads Hybrid & Server-Side Tracking SDK -->
+<script src="https://api.piratatracking.online/api/sdk?pixel=3c6af991-b2f0-4af7-9401-838c28751965" async></script>
+  <script>
+    document.getElementById('age-form').addEventListener('submit', function() {
+      if (window.agTracker && window.agTracker.viewContent) {
+        window.agTracker.viewContent(0, {
+          content_name: 'Gate de Idade',
+          content_ids: ['gate_idade']
+        });
+      }
+    });
+  </script>
+  <script src="assets/tracking.js"></script>
+</body>
+</html>
